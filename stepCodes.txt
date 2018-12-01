@@ -1,0 +1,39 @@
+Create React App
+================Git bash here===============
+0- G:\emVcTself\ReactApp>npm install create-react-app -g
+1- G:\emVcTself\ReactApp>npm i npm (to Update)
+2- G:\emVcTself\ReactApp>npx create-react-app my-app
+3- G:\emVcTself\ReactApp\>cd my-app>npm start
+=>keep the local host running to manage the app.
+======================================================
+ School2: 
+create reactapp
+
+Simple react snippets
+prettier-code formatter  ==> make it by default to save on close
+Live Server
+
+- G:\emVcTself\ReactApp>npx create-react-app  reactapp
+
+Success! Created react-app at G:\emVcTself\ReactApp\my-app\react-app
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd react-app
+  npm start
+
+Happy hacking!
