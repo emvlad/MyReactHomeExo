@@ -19,19 +19,21 @@ class Counter extends Component {
       <div>
         <img src={this.state.imageUrl} alt="" />
         <span style={this.styles} className="badge badge-primary m-2">
-          {" "}
           {this.state.love}
         </span>
         <button style={{ fontSize: 30 }} className="btn btn-secondary btn-m">
           {this.state.dix}
         </button>
-        <br /><br />
+        <br />
+        <br />
 
         <span className={this.getBadgeClasses()}> {this.formatCount()}</span>
         <button className="btn  btn-m btn-secondary">Btn to Increment</button>
 
         <ul>
-        {this.state.tags.map(tag=><li key={tag}>{tag}</li>)}
+          {this.state.tags.map(tag => (
+            <li key={tag}>{tag}</li>
+          ))}
         </ul>
       </div>
     );

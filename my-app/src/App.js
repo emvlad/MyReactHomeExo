@@ -8,6 +8,7 @@ import Person from './Person/Person';
 class App extends Component {
 
   //create state
+  //Les champs propriétés de la classe dans État. 
       state={
         persons:[ {name :'Marco', age :20},
                   {name :'Marcelin', age:20},
@@ -18,42 +19,7 @@ class App extends Component {
 
         otherStateProperty:"value"
       }
-
-     //Don't do this: this.state.persons[0].name='Maximilian';
-      
-      switchNameHandler =(newName)=>{
-      // console.log('was clicked')
-      //but this:
-          this.setState({
-          persons:[ {name :newName, age :28},
-                    {name :'Marceline', age:56},
-                    {name :"Dinette", age :29},
-                    {name :"Martima", age :35}
-
-                  ] })
-      }
-     
-      /* comment: TYPICAL HandleFunction to manipulate object */
-      sweepOverNameHandler =(newName)=>{
-          this.setState({
-          persons:[ {name :newName, age :20},
-                    {name :'Marcelin', age:20},
-                    {name :'Martin', age :30},
-                    {name :'Martimo', age :30}
-                  ] })
-      }
-
-      /*comment: event and target-value*/
-      nameChangHandler=(event)=>{
-        this.setState({
-          persons:[ {name :event.target.value, age :20},
-                    {name :'Marcelin', age:20},
-                    {name :'Martin', age :30},
-                    {name :'Martimo', age :30}
-                  ] })
-      }
-
-    //default method to build final class component
+	  //default method to delivery final class component
       render() {
         const style ={
           backgroundColor:'red',
@@ -63,7 +29,7 @@ class App extends Component {
     
         };
 
-        //build
+        //report
         return (
           <div className="App">
             <h1> Hi JSX, I'm Vlad !</h1>
@@ -115,6 +81,42 @@ class App extends Component {
      /*  render() {
         return React.createElement('div',{className:'App'}, React.createElement('h1',null,'Does this nest work'));
       } */
+
+     //Don't do this: this.state.persons[0].name='Maximilian';
+      
+      switchNameHandler =(newName)=>{
+      // console.log('was clicked')
+      //but this:
+          this.setState({
+          persons:[ {name :newName, age :28},
+                    {name :'Marceline', age:56},
+                    {name :"Dinette", age :29},
+                    {name :"Martima", age :35}
+
+                  ] })
+      }
+     
+      /* comment: TYPICAL HandleFunction to manipulate object */
+      sweepOverNameHandler =(newName)=>{
+          this.setState({
+          persons:[ {name :newName, age :20},
+                    {name :'Marcelin', age:20},
+                    {name :'Martin', age :30},
+                    {name :'Martimo', age :30}
+                  ] })
+      }
+
+      /*comment: event and target-value*/
+      nameChangHandler=(event)=>{
+        this.setState({
+          persons:[ {name :event.target.value, age :20},
+                    {name :'Marcelin', age:20},
+                    {name :'Martin', age :30},
+                    {name :'Martimo', age :30}
+                  ] })
+      }
+
+    
 }
 
     export default App;

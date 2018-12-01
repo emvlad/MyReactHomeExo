@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 
 //import Class from "./source-folderName/fileNameJsx"
-import Countera from "./components/countera";
+import Countera from "./Components/Countera";
 
 ReactDOM.render(<Countera />, document.getElementById("root"));
 
