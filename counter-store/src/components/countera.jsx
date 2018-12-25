@@ -3,13 +3,15 @@ import React, { Component } from "react";
 
 import "../Sheets/Sheets.css";
 
-//component-ClassJSX
+//ClassJSX-extends component
 class Countera extends Component {
   //No.1 ======= Les champs propriétés de la classe Modèle. ==========================
   state = {
     tags: ["tag1:", "tag2:", "tag3:"],
     count: 0,
-    imageUrl: "http://localhost/photos/200.jpg"
+    imageUrl: "http://localhost/photos/morePicts/21.jpg"
+
+ 
   };
 
   /*  constructor(){
@@ -56,8 +58,11 @@ class Countera extends Component {
         <button
          // onClick={this.handleBtnIncrement}
          // onClick={this.doHandleInrement}
-         onClick={ () =>this.handleBtnIncrement({ id: 1})}
-        //  onClick={ () =>this.handleBtnIncrement(product)}
+          onClick={ () =>this.handleBtnIncrement({ id: 1})}
+
+          //learn to do it this way
+         // onClick={ () =>this.handleBtnIncrement(product)}
+
           className="btn  btn-secondary btn-sm"
         > Click to Increment </button>
       
@@ -66,8 +71,8 @@ class Countera extends Component {
     ); //end report
 
   } //end delivery report
-
-  //Create all functions or methods after render
+//=============================//Create all functions or methods after render\\==========================================================================
+  
  //function-5
  handleBtnIncrement = (product) => {
   // console.log("increment clicked", this);
@@ -96,7 +101,23 @@ class Countera extends Component {
           <li key={tag}> {tag} </li>
         ))}
         
-        <li> {"not state and out of map "}</li>
+        <li> {"Recap # 1: Class and state "}</li>
+        <ol>
+        <li> {'JSX9(ClassJSX-extends component) - Rendering Lists: {this.state.tags.map(tag => (<li key={tag}> {tag} </li> ))}'}</li>
+        <li> {'Conditional Rendering: color_badge += this.state.count === 0 ? "warning" : "primary";'}</li>
+        <li> {"Handling Events: onClick={this.handleBtnIncrement}"}</li>
+        <li> {"Updating the state: this.setState({ count: this.state.count + 1 });"}</li>
+        </ol>
+
+        <li> {"Recap # 2: Composing Components "}</li>
+        <ol>
+        <li> {'Pass Data'}</li>
+        <li> {'Raise and handle Events '}</li>
+        <li> {"Multiple Components in Sync "}</li>
+        <li> {"Funtional Components "}</li>
+        <li> {"Lifecycle Hooks "}</li>
+        </ol>
+
       </ul>
     );
   } //end of this.method-2
@@ -112,7 +133,6 @@ class Countera extends Component {
     return color_badge;
   }
  
-
   //method-6
   otherNewArrowMethod = () => {};
   //method-7
