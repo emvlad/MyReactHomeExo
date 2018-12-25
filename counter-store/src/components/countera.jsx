@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import "../Sheets/Sheets.css";
 
 //ClassJSX-extends component
-class Countera extends Component {
+class Countero extends Component {
   //No.1 ======= Les champs propriétés de la classe Modèle. ==========================
   state = {
     tags: ["tag1:", "tag2:", "tag3:"],
@@ -30,7 +30,7 @@ class Countera extends Component {
       border: "1px solid blue",
       padding: "8px"
     }; //end local class-styles
-    //report:
+    //report what you want below the return:
     return (
       <div className="boxit">
         <img
@@ -140,5 +140,5 @@ class Countera extends Component {
 
 } //end class
 //Finally class available to use(importable class in index.js).
-export default Countera;
+export default Countero;
 //========================******==============================
