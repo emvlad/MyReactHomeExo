@@ -1,0 +1,29 @@
+/* personalizing global page */
+
+.boxit {
+  width: 30%;
+  margin: 10px;
+  border: 1px solid rgb(153, 100, 122);
+  box-shadow: 0 2px 3px rgb(84, 31, 231);
+  padding: 2px;
+  /* text-align: center;*/
+}
+
+.boxtag {
+  width: 70%;
+  margin: 10px;
+  border: 1px solid rgb(153, 100, 122);
+  box-shadow: 0 2px 3px rgb(84, 31, 231);
+  text-align: left;
+}
+
+button {
+  background: orangered;
+  font: inherit;
+  border: 1px solid rgb(95, 172, 196);
+  padding: 18px;
+}
+
+h1 {
+  color: rgb(228, 18, 140);
+}

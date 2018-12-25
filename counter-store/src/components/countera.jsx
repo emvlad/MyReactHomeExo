@@ -7,9 +7,9 @@ import "../Sheets/Sheets.css";
 class Countera extends Component {
   //No.1 ======= Les champs propriétés de la classe Modèle. ==========================
   state = {
-    imageUrl: "http://localhost/photos/200.jpg",
+    tags: ["tag1:", "tag2:", "tag3:"],
     count: 0,
-    tags: ["tag1", "tag2", "tag3"]
+    imageUrl: "http://localhost/photos/200.jpg"
   };
 
   /*  constructor(){
@@ -45,37 +45,45 @@ class Countera extends Component {
         <span style={{ color: "blue" }}> Test Css </span>
         <br />
         <hr />
-
         {/* Here Start Home Video school after JloSmile */}
-
         <div className="boxtag">
           {this.state.tags.length === 0 && "Please Create a new Tag&&&"}
 
           {this.rendTags()}
         </div>
-      
         <hr />
         <span className={this.colorBadgeClasses()}> {this.formatCount()}</span>
-        
         <button
-          onClick={this.handleBtnIncrement}
-          className="btn  btn-m btn-secondary"
-        >
-          Btn to Increment
-        </button>
-        <br />   <br />
-        <span className={this.colorBadgeClasses()}> {this.formatCount()}</span>
-          <button 
-          onClick={this.handleBtnIncrement}
-          className="btn  btn-m btn-secondary"
-        >
-          Btn to Add
-        </button>
+         // onClick={this.handleBtnIncrement}
+         // onClick={this.doHandleInrement}
+         onClick={ () =>this.handleBtnIncrement({ id: 1})}
+        //  onClick={ () =>this.handleBtnIncrement(product)}
+          className="btn  btn-secondary btn-sm"
+        > Click to Increment </button>
+      
+       
       </div>
     ); //end report
+
   } //end delivery report
 
-  //Controlller all functions
+  //Create all functions or methods after render
+ //function-5
+ handleBtnIncrement = (product) => {
+  // console.log("increment clicked", this);
+ // console.log(product);
+
+   this.setState({ count: this.state.count + 1 });
+ };
+
+  //function-5.1
+  /*
+  doHandleInrement =()=>{
+    this.handleBtnIncrement({ id: 1});
+  };
+*/
+
+
   //No.3 ============= Some other methods to get control==========================
   //create this.method-2 to map and report list_tags
   rendTags() {
@@ -86,29 +94,30 @@ class Countera extends Component {
       <ul>
         {this.state.tags.map(tag => (
           <li key={tag}> {tag} </li>
-        ))}{" "}
+        ))}
+        
+        <li> {"not state and out of map "}</li>
       </ul>
     );
   } //end of this.method-2
   //method-3
   formatCount() {
-    return "zero";
+    return this.state.count;
   }
 
-  //method-4 condition to get effect color on badgeText
+  //method-4 CLASSIC_condition to get changed effect color on badgeText
   colorBadgeClasses() {
-    let color_badge = "badge m-2 badge-";
+    let color_badge = "badge m-2 badge-";  
     color_badge += this.state.count === 0 ? "warning" : "primary";
     return color_badge;
   }
-  //method-5
-  handleBtnIncrement = () => {
-    console.log("increment clicked", this);
-  };
+ 
+
   //method-6
   otherNewArrowMethod = () => {};
   //method-7
   usedOldMethod() {}
+
 } //end class
 //Finally class available to use(importable class in index.js).
 export default Countera;

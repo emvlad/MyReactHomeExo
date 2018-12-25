@@ -10,7 +10,7 @@ const person = (props)=>{
     return ( 
             <div className='Person'>
                <p onMouseOver={props.likeBtn}>      
-                I am  <input type ="text" onChange={props.changed} value={props.name}/>
+                I am  <input type ="text" onChange={props.nameChanged} value={props.name}/>
                 &nbsp; and I am {props.age}&nbsp;
                 years old {props.origine}.</p>
                 <p>{props.children}</p>     

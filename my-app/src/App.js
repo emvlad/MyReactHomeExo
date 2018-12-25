@@ -48,7 +48,7 @@ class App extends Component {
            {/* changingHandler from input */}
             <Person name ={this.state.persons[0].name} 
                     age ={this.state.persons[0].age}
-                    changed ={this.nameChangHandler}
+                    nameChanged ={this.nameChangHandler}
                     
             />
 
@@ -88,13 +88,14 @@ class App extends Component {
       // console.log('was clicked')
       //but this:
           this.setState({
-          persons:[ {name :newName, age :28},
-                    {name :'Marceline', age:56},
-                    {name :"Dinette", age :29},
-                    {name :"Martima", age :35}
+				  persons:[ {name :newName, age :28},
+							{name :'Marceline', age:56},
+							{name :"Dinette", age :29},
+							{name :"Martima", age :35}
 
-                  ] })
-      }
+                        ]
+				})
+        }
      
       /* comment: TYPICAL HandleFunction to manipulate object */
       sweepOverNameHandler =(newName)=>{

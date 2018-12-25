@@ -8,9 +8,10 @@ import "bootstrap/dist/css/bootstrap.css";
 //import Class from "./source-folderName/fileNameJsx"
 import Countera from "./Components/Countera";
 
+//prépare le document de la classe rapportée au DOM
+// à afficher par ID dans le html .
+
 ReactDOM.render(<Countera />, document.getElementById("root"));
-
-
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
