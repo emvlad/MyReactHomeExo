@@ -1,20 +1,20 @@
 /* personalizing global page */
 
-.boxit {
-  width: 35%;
+.boxtag {
+  width: 15%;
   margin: 20px;
-  border: 1px solid rgb(153, 100, 122);
-  box-shadow: 0 2px 3px rgb(84, 31, 231);
-  padding: 8px;
+  border: 1px solid #e69451;
+  box-shadow: 0 2px 3px hsl(46, 93%, 29%);
+  text-align: left;
   /* text-align: center;*/
 }
 
-.boxtag {
-  width: 80%;
-  margin: 10px;
-  border: 1px solid rgb(153, 100, 122);
-  box-shadow: 0 2px 3px rgb(84, 31, 231);
-  text-align: left;
+.boxit {
+  width: 25%;
+  margin: 20px;
+  border: 1px solid #ee1bee;
+  box-shadow: 0 2px 3px #c50760;
+  padding: 8px;
 }
 
 button {

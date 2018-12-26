@@ -6,8 +6,9 @@ import "../Sheets/Sheets.css";
 //ClassJSX-extends component
 class Countero extends Component {
   //No.1 ======= Les champs propriétés de la classe Modèle. ==========================
+  //local only
   state = {
-    //pass data
+    //props data
        value: this.props.value 
   };
 
@@ -37,23 +38,28 @@ class Countero extends Component {
           onClick={ () =>this.handleBtnIncrement()}
 
           //learn to do it this way
-         // onClick={ () =>this.handleBtnIncrement(product)}
+         // onClick={ () =>this.handleBtnIncrement(arg)}
 
           className="btn  btn-secondary btn-sm"
         > Click to Increment </button>
+
+        <button onClick={() => this.props.onDelete(this.props.id)} 
+                className="btn btn-danger btn-sm m-2"
+
+        > Delete</button>
       
        
       </div>
     ); //end report
+    //the child component execute onClick props-parent-method
 
   } //end delivery 
 //=============================//Create all functions or methods after render\\==========================================================================
   
- //function-5
+ //function-5 with arrow to inherit parent-super-class
  handleBtnIncrement = () => {
   // console.log("increment clicked", this);
  // console.log(product);
-
    this.setState({ count: this.state.value  += 1  });
  };
 

@@ -1,22 +1,27 @@
 /* personalizing global page */
 
-.boxit{
-    width: 40%;
-    margin: 10px;
-    border:1px solid rgb(116, 9, 9);
-    box-shadow: 0 2px 3px rgb(173, 224, 30);
-    padding: 6px;
-   /* text-align: center;*/
-
-}
-.boxtag {
-    width: 30%;
-    margin: 10px;
-    border: 1px solid rgb(153, 100, 122);
-    box-shadow: 0 2px 3px rgb(84, 31, 231);
+.boxtagg {
+    width: 15%;
+    margin: 20px;
+    border: 1px solid rgb(150, 36, 243);
+    box-shadow: 0 2px 3px #4886e2;
     text-align: left;
   }
-  
+  .boxitt {
+    width: 35%;
+    margin: 20px;
+    border: 1px solid hsl(109, 78%, 55%);
+    box-shadow: 0 2px 3px hsl(73, 78%, 65%);
+    padding: 8px;
+    /* text-align: center;*/
+  }
+  .boxwap {
+    width: 75%;
+    margin: 20px;
+    border: 1px solid hsl(69, 86%, 52%);
+    box-shadow: 0 2px 3px #c50760;
+    padding: 8px;
+  }
 
 button {
     background:green;
