@@ -7,10 +7,13 @@ import "../Sheets/Sheets.css";
 class Countero extends Component {
   //No.1 ======= Les champs propriétés de la classe Modèle. ==========================
   //local only
-  state = {
+ /* state = {
     //props data
        value: this.props.items.value 
   };
+*/
+
+
 
   /*  constructor(){
     super();
@@ -31,15 +34,14 @@ class Countero extends Component {
 
         <h4> Item { this.props.id} </h4>
       
-          <span className={this.colorBadgeClasses()}
-         
-          > {this.formatCount()}</span>
+          <span className={this.colorBadgeClasses()}> {this.formatCount()}</span>
         <button
         //called above the attribut method of the className-atrribut
         //and then a childFormatCount  
         // onClick={this.handleBtnIncrement}
         // onClick={this.doHandleInrement}
-          onClick={ () =>this.handleBtnIncrement()}
+        //  onClick={ () =>this.handleBtnIncrement()}
+        onClick={ () =>this.props.onIncrement(this.props.item)}
 
           //learn to do it this way
          // onClick={ () =>this.handleBtnIncrement(arg)}
@@ -47,7 +49,7 @@ class Countero extends Component {
           className="btn  btn-secondary btn-sm"
         > Click to Increment </button>
 
-        <button onClick={() => this.props.onDelete(this.props.items.id)} 
+        <button onClick={() => this.props.onDelete(this.props.item.id)} 
                 className="btn btn-danger btn-sm m-2"
 
         > Delete</button>
@@ -60,13 +62,31 @@ class Countero extends Component {
   } //end delivery 
 //========//Create all functions or methods after render\\===============
   
+ //method-3
+ formatCount() {
+ // const value =this.state.value;
+ const value =this.props.item.value;
+  return value === 0? "Zero" :value;
+}
+
+//method-4 CLASSIC_condition to get changed effect color
+//create attribut method for a className-attribut
+colorBadgeClasses() {
+  let color_badge = "badge m-2 badge-";  
+  color_badge += this.props.item.value === 0 ? "warning" : "primary";
+  return color_badge;
+}
+
+
+
+
  //function-5 with arrow to inherit parent-super-class
- handleBtnIncrement = () => {
+/*handleBtnIncrement = () => {
   // console.log("increment clicked", this);
  // console.log(product);
    this.setState({ value: this.state.value  += 1  });
  };
-
+*/
   //function-5.1
   /*
   doHandleInrement =()=>{
@@ -75,18 +95,6 @@ class Countero extends Component {
 */
   //No.3 ======= Some other methods to get control==================
  
-  //method-3
-  formatCount() {
-    return this.state.value;
-  }
-
-  //method-4 CLASSIC_condition to get changed effect color
-  //create attribut method for a className-attribut
-  colorBadgeClasses() {
-    let color_badge = "badge m-2 badge-";  
-    color_badge += this.state.value === 0 ? "warning" : "primary";
-    return color_badge;
-  }
  
   //method-6
   otherNewArrowMethod = () => {};
