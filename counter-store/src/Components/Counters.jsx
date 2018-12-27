@@ -38,11 +38,12 @@ class Counters extends Component {
                     /> 
                     {this.rendRecaps()}  
                
-                    { this.state.prodCounterItems.map(props => 
-                        <Countero key={props.id} 
-                                  value={props.value} 
-                                  id={props.id}
+                    { this.state.prodCounterItems.map(items => 
+                        <Countero key={items.id}                                   
                                   onDelete={this.handleDelete}
+                                  //value={items.value} 
+                                  //id={items.id}
+                                  items={items}
                         /> 
                     )}
                 
@@ -55,10 +56,11 @@ class Counters extends Component {
 
     handleDelete = (itemId) =>{
       //  console.log('Event Handler Call', itemId);
-      const counterItems = this.state.prodCounterItems.filter(c => c.id !== itemId);
-      this.setState({prodCounterItems:counterItems});
+     // const counterItems = this.state.prodCounterItems.filter(c => c.id !== itemId);
+     // this.setState({prodCounterItems:counterItems});
     
-
+      const prodCounterItems = this.state.prodCounterItems.filter(c => c.id !== itemId);
+      this.setState({prodCounterItems});
 
     };  
 
