@@ -1,7 +1,7 @@
 /* personalizing global page */
 
 .boxtag {
-  width: 15%;
+  width: 10%;
   margin: 20px;
   border: 1px solid #e69451;
   box-shadow: 0 2px 3px hsl(46, 93%, 29%);
@@ -10,7 +10,7 @@
 }
 
 .boxit {
-  width: 30%;
+  width: 40%;
   margin: 20px;
   border: 1px solid #ee1bee;
   box-shadow: 0 2px 3px #c50760;

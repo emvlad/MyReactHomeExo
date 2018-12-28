@@ -9,12 +9,9 @@ class Countero extends Component {
   //local only
  /* state = {
     //props data
-       value: this.props.items.value 
+       value: this.props.item.value 
   };
 */
-
-
-
   /*  constructor(){
     super();
     this.handleBtnIncrement = this.handleBtnIncrement.bind(this);
@@ -32,7 +29,7 @@ class Countero extends Component {
     return (
       <div className="boxit">
 
-        <h4> Item { this.props.id} </h4>
+        <h4> Item { this.props.item.id} </h4>
       
           <span className={this.colorBadgeClasses()}> {this.formatCount()}</span>
         <button
@@ -52,10 +49,12 @@ class Countero extends Component {
         <button onClick={() => this.props.onDelete(this.props.item.id)} 
                 className="btn btn-danger btn-sm m-2"
 
-        > Delete</button>
-      
+        > Delete</button> 
+         
+         
        
       </div>
+       
     ); //end report
     //the child component execute onClick props-parent-method
 
@@ -77,9 +76,7 @@ colorBadgeClasses() {
   return color_badge;
 }
 
-
-
-
+ 
  //function-5 with arrow to inherit parent-super-class
 /*handleBtnIncrement = () => {
   // console.log("increment clicked", this);
@@ -94,7 +91,6 @@ colorBadgeClasses() {
   };
 */
   //No.3 ======= Some other methods to get control==================
- 
  
   //method-6
   otherNewArrowMethod = () => {};
