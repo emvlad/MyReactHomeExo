@@ -16,28 +16,35 @@ class Counters extends Component {
     // <h4>Item # {item.id}</h4>
     // or id={item.id} or id={props.id}
     //map the import class
+    //using object destructuring before the return statement to remove repeating_props
+
+    const {onReset, depart,onDelete,onIncrement,prodCounterItems} = this.props;
+
     return (
       <div class="boxwap">
       
-        {this.rendRecaps()}
+        <span> {this.rendRecaps()} </span>
 
         <button
-          onClick={this.props.onReset}
+          onClick={onReset}
           className="btn btn-primary btn-sm m-2"
-        >Reset
+         >Reset
         </button>
+        
+        <span className="badge badge-pill badge-primary">{depart}</span>  
 
-        {this.props.prodCounterItems.map(item => (
-          <Countero
+        {prodCounterItems.map(item => (
+              <Countero
                 key={item.id}
-                onDelete={this.props.onDelete}
-                onIncrement={this.props.onIncrement}
+                onDelete={onDelete}
+                onIncrement={onIncrement}
                 //value={item.value}
                 //id={item.id}
                 item={item}
-            />
-        ))}
-                {this.recaps()}
+              />
+        ) ) }
+        
+        <span>{this.recaps()}</span>
 
       </div>
     ); //end report
@@ -52,15 +59,16 @@ class Counters extends Component {
         <li> {"Recap # 2: Composing Components - Mosh Hamedani "}</li>
         <ol>
           <li> {"Pass Data"}</li>
-          <li> {"Debug React Developer Tools ext. "}</li>
+          <li> {"Debug React Developer Tools extension. "}</li>
           <li> {"Props vs State "}</li>
           <li> {"Raise-props-onDelete and handle Events Delete  "}</li>
-          <li> {"Removing the local state"}</li>
-          <li> {"Multiple Components in Sync "}</li>
-          <li> {"Lifting State up "}</li>
+          <li> {"Removing the local state - creating props"}</li>
+          <li> {"Lifting State up to App reporting in React.Fragment"}</li>
+          <li> {"Multiple Components in Sync with React.Fragment "}</li>          
          
           <li> {"Functional Components "}</li>
-
+          <li>{"Stateless functional class component with const_function"}</li>
+          <li> {"Destructuring arguments or placing const-destruct-object above the return statement "}</li>
           <li> {"Lifecycle Hooks "}</li>
         </ol>
       </ul>

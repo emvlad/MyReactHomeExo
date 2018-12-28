@@ -17,7 +17,7 @@ class App extends Component {
       { id: 4, value: 0 }
     ]
     ,
-    Depart : "Sale"
+    depart : "Sale Dapartement"
   };
   //delivery
   render() {
@@ -31,7 +31,10 @@ class App extends Component {
                 height="15%"
                 width="15%"
             />
-            <NavBar totalProdCounters = {this.state.prodCounterItems.filter(p => p.value > 0).length}/>
+            <NavBar totalProdCounters = {this.state.prodCounterItems.filter(
+                    p => p.value > 0).length}
+            />
+           
             <main className="container">
          
              <Counters
@@ -39,7 +42,10 @@ class App extends Component {
                 onReset={this.handleReset}
                 onDelete={this.handleDelete}
                 onIncrement={this.handleIncrement}
+                depart={this.state.depart}
               />
+
+
             </main>
       </React.Fragment>
       

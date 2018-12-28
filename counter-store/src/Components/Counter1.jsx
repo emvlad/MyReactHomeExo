@@ -26,6 +26,7 @@ class Countero extends Component {
    //console.log("showTheProps", this.props);
     //report what you want below the return:
     //{ this.props.children} or  { this.props.id}  
+    
     return (
       <div className="boxit">
 
