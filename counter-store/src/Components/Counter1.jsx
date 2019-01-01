@@ -21,10 +21,16 @@ class Countero extends Component {
   componentDidUpdate(prevProps, prevState){
     console.log('prevState','prevState');
     console.log('prevProps','prevProps');
-    if(prevProps.Countero.value !==this.props.Countero.value){
+   // if(prevProps.Countero.value !==this.props.Countero.value){
       //Ajax call and get new data from the server
-    }
+   // }
   }
+;
+//Unmount Phase
+componentWillUnmount(){
+  console.log('Counter - Unmount');
+}
+;
   //No.2 ======Special delivery method - that report to the Dom.=========================
   // necessary method-1
   render() {
