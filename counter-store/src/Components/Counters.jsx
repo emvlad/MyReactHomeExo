@@ -18,10 +18,11 @@ class Counters extends Component {
     //map the import class
     //using object destructuring before the return statement to remove repeating_props
 
+    //console.log('Counters -Rendered')
     const {onReset, depart,onDelete,onIncrement,prodCounterItems} = this.props;
 
     return (
-      <div class="boxwap">
+      <div className="boxwap">
       
         <span> {this.rendRecaps()} </span>
 
@@ -51,8 +52,8 @@ class Counters extends Component {
     //the parent create handleDelete event
     //and make it available within props
   } // end delivery
-  
-  //create recapitulation method
+
+    //create recapitulation method
   rendRecaps() {
     return (
       <ul>
@@ -69,7 +70,7 @@ class Counters extends Component {
           <li> {"Functional Components "}</li>
           <li>{"Stateless functional class component with const_function"}</li>
           <li> {"Destructuring arguments or placing const-destruct-object above the return statement "}</li>
-          <li> {"Lifecycle Hooks "}</li>
+          <li> {"Lifecycle Hooks -Phases: Mount -Update - Unmount "}</li>
         </ol>
       </ul>
     );

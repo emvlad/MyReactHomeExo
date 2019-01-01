@@ -19,35 +19,50 @@ class App extends Component {
     ,
     depart : "Sale Dapartement"
   };
+  /*
+  //Mounting Phase:
+  componentDidMount(){
+    //Ajax call
+    //this.setState({movies});
+    console.log("App - Mounted");
+  }
+   constructor(props){
+    super(props);
+    console.log("App - Constructor - super");
+    //console.log("Appmount - Constructor", this.props);
+    //this.state =this.props.something;
+  }
+*/
   //delivery
   render() {
-    //report-return
-    return (
-     <React.Fragment>
+       // console.log('App - Rendered');
+        //report-return
+        return (
+        <React.Fragment>
             <img
-                src={this.state.img1Src}
-                className="boxtagg"
-                alt="JlovSmile"
-                height="15%"
-                width="15%"
+            src={this.state.img1Src}
+            className="boxtagg"
+            alt="JlovSmile"
+            height="15%"
+            width="15%"
             />
             <NavBar totalProdCounters = {this.state.prodCounterItems.filter(
-                    p => p.value > 0).length}
+                p => p.value > 0).length}
             />
-           
+            
             <main className="container">
-         
-             <Counters
-                prodCounterItems={this.state.prodCounterItems}
-                onReset={this.handleReset}
-                onDelete={this.handleDelete}
-                onIncrement={this.handleIncrement}
-                depart={this.state.depart}
-              />
+            
+                <Counters
+                    prodCounterItems={this.state.prodCounterItems}
+                    onReset={this.handleReset}
+                    onDelete={this.handleDelete}
+                    onIncrement={this.handleIncrement}
+                    depart={this.state.depart}
+                />
 
 
             </main>
-      </React.Fragment>
+        </React.Fragment>
       
     );
   }

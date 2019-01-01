@@ -17,16 +17,24 @@ class Countero extends Component {
     this.handleBtnIncrement = this.handleBtnIncrement.bind(this);
   } */
 
+  //Update Phase
+  componentDidUpdate(prevProps, prevState){
+    console.log('prevState','prevState');
+    console.log('prevProps','prevProps');
+    if(prevProps.Countero.value !==this.props.Countero.value){
+      //Ajax call and get new data from the server
+    }
+  }
   //No.2 ======Special delivery method - that report to the Dom.=========================
   // necessary method-1
   render() {
     //delivery may take some local property_variables here that will be reporting to the Dom.
     //create provisory local_style back-CSS
  
-   //console.log("showTheProps", this.props);
+    //console.log("showTheProps", this.props);
     //report what you want below the return:
     //{ this.props.children} or  { this.props.id}  
-    
+   // console.log('Countero -Rendered')
     return (
       <div className="boxit">
 
