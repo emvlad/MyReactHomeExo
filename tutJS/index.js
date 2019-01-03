@@ -283,7 +283,7 @@ function Cerclo(radius){
             return defaultLocation;
         },
         set: function(value){
-            if(!value.x || value.y){
+            if(!value.x || !value.y){
                 alert ('Invalid value');
 
                // throw new Error('Invalid location.');
@@ -318,10 +318,11 @@ const voiture={
 
 };
 
+//display without modification
 console.log(' Voiture: ' + voiture.marque);
 console.log(' Voiture: ' + voiture.fullDescription);
 
-//modify description
+//modify (set) description with an argument to split
 voiture.fullDescription = 'Mazda 626';
 console.log(' Voiture: ' + voiture.marque);
 console.log(' Voiture: ' + voiture.fullDescription);
@@ -337,5 +338,58 @@ console.log(' Voiture: ' + voiture.fullDescription);
 //const car = Object.assign({}, voiture);
 
 //3: spread operator...
-const car ={...voiture}
-console.log('Clone object:' + car.fullDescription)
+const car ={...voiture};
+console.log('Clone object:' + car.fullDescription);
+
+// ================= filter - array ==================
+const numbers=[1,-1,2,3];
+
+/*const filterNumb =numbers.filter(function(nvalue){
+    return nvalue >=0;*/
+    //call back function and return where arrow function=>valueCondition
+    const filterNumb =numbers.filter(n => n >= 0);
+
+
+console.log('Using Filter arrow : ', filterNumb);
+
+// ================= Map ~ array==================
+
+
+   //map to a string
+    const items =filterNumb.map(n => '<li>' + n + '</li>');
+    const html = '<ul>' + items.join('') + '</ul>';
+
+    //map to an object
+    const itemObj =filterNumb.map(n =>({value:n}) );
+   
+
+//console.log('Using Map items arrow : ', items);
+console.log('Using Map items to string  : ', html);
+console.log('Using map items to an object:' , itemObj);
+
+//==================other way - chaining ==============
+
+const numeros=[1,-1,2,3];
+const articles = numeros
+.filter(n => n >= 0)
+.map(n =>({value:n}) )
+.filter(obj=>obj.value >1)
+.map(obj=>obj.value);
+console.log('Using Chaining to map items to an object:' , articles);
+
+//================== Reduce - array =======
+
+//regular way
+let sum =0;
+for (let n of numeros)
+sum += n;
+console.log('Somme:', sum);
+//reduce method way
+const total = numeros.reduce((accumulator, currentValue) =>{
+    return accumulator + currentValue;
+}, 0);
+
+const totalAcc = numeros.reduce((accumulator, currentValue) =>accumulator + currentValue);
+
+console.log('Total:' ,total);
+console.log('Accumulate:' ,totalAcc);
