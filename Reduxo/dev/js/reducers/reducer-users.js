@@ -1,4 +1,5 @@
 
+//will return an array of users
 export default function(){
     return[
         { id:1,
@@ -31,6 +32,6 @@ export default function(){
         }
     ]
 
-    //to combine in one big Object
-    //in the current folder create a new file named index
+    //this array need to be combined in one big Object
+    //stay in the current folder create a new file named index
 }
